@@ -9,10 +9,10 @@ namespace ConsoleButtons
     {
         private Process ThisProcess = Process.GetCurrentProcess();
         private IntPtr WindowHandlePtr;
-        public Window.Rect WindowRect;
+        private Window.Rect WindowRect;
 
         public List<UIComponent> Components;
-        public Mouse Mouse;
+        private Mouse Mouse;
 
         public ConsoleClick()
         {

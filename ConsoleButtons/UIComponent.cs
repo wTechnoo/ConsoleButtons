@@ -110,7 +110,7 @@ namespace ConsoleButtons
             this.markChar = markChar;
             IsChecked = isChecked;
 
-            AABB = new AABB(x + 1, y, 20, 16);
+            AABB = new AABB(x, y, 20, 16);
             ConsolePosition = new Point(x, y);
 
             if (!initialized)
@@ -122,7 +122,7 @@ namespace ConsoleButtons
             this.markChar = markChar;
             IsChecked = isChecked;
 
-            AABB = new AABB(x + 1, y, collideWithText ? 20 + ("  " + text).Length * 8 : 20, 16);
+            AABB = new AABB(x, y, collideWithText ? 20 + ("  " + text).Length * 8 : 20, 16);
 
             ConsolePosition = new Point(x, y);
 
