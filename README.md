@@ -1,8 +1,8 @@
 # Console Buttons
 NUGGET PACKAGE:
-Clickable buttons for C# Console!
+Clickable Buttons/Checkboxes for C# Console!
 
-https://www.nuget.org/packages/ConsoleButtons/2.0.0
+https://www.nuget.org/packages/ConsoleButtons/2.1.0
 
 Warning: Console Buttons only work on build versions, it won't work inside Visual Studio/Rider!!!
 
