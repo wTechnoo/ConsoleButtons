@@ -6,6 +6,7 @@ namespace ConsoleButtons
 {
     public struct Mouse
     {
+        public static Point ConsoleMousePoint = new Point(0, 0);
         public static AABB LocalMousePoint = new AABB(0, 0, 2, 2);
         public static Point MousePoint = new Point(0, 0);
 
@@ -24,6 +25,8 @@ namespace ConsoleButtons
 
             LocalMousePoint.x = MousePoint.X - WindowRect.Left;
             LocalMousePoint.y = MousePoint.Y - WindowRect.Top;
+
+            (ConsoleMousePoint.X, ConsoleMousePoint.Y) = Window.ConvertPxToConsole(LocalMousePoint.x, LocalMousePoint.y, WindowRect);
 
             if (LocalMousePoint.x > WindowRect.Right - WindowRect.Left)
                 LocalMousePoint.x = WindowRect.Right - WindowRect.Left;

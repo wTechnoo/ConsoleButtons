@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text;
 using Console = Colorful.Console;
 
 namespace ConsoleButtons
@@ -9,13 +10,14 @@ namespace ConsoleButtons
     {
         private Process ThisProcess = Process.GetCurrentProcess();
         private IntPtr WindowHandlePtr;
-        private Window.Rect WindowRect;
+        public static Window.Rect WindowRect;
 
         public List<UIComponent> Components;
         private Mouse Mouse;
 
         public ConsoleClick()
         {
+            Console.OutputEncoding = Encoding.UTF8;
             Console.CursorVisible = false;
             DisableConsoleQuickEdit.Go();
 
@@ -23,6 +25,11 @@ namespace ConsoleButtons
             WindowRect = new Window.Rect();
             Mouse = new Mouse();
             Components = new List<UIComponent>();
+        }
+        public void Initialize()
+        {
+            Window.GetWindowRect(WindowHandlePtr, ref WindowRect);
+            Mouse.Update(WindowRect);
         }
 
         public void AddToComponents(UIComponent component)
@@ -37,6 +44,7 @@ namespace ConsoleButtons
             for (int i = 0; i < Components.Count; i++)
             {
                 CollisionDetection(Components[i], Mouse.LocalMousePoint);
+                Components[i].Update();
             }
         }
         public void CollisionDetection(UIComponent component, AABB b)
