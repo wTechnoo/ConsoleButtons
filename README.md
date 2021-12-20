@@ -1,14 +1,19 @@
-# Console Buttons
-Clickable Buttons/Checkboxes/Sliders for C# Console!
+<h1 align="center" id="title">Console Buttons</h1>
 
-NUGGET PACKAGE: 
-https://www.nuget.org/packages/ConsoleButtons/2.3.0
+<p align="center"><img src="https://socialify.git.ci/wTechnoo/ConsoleButtons/image?description=1&font=Source%20Code%20Pro&language=1&logo=https%3A%2F%2Fcdn.discordapp.com%2Fattachments%2F602356897726857216%2F922317460802273310%2FCBLogo_4.png&owner=1&pattern=Diagonal%20Stripes&stargazers=1&theme=Dark" alt="project-image"></p>
 
-### Warning: Console Buttons only work on build versions, it won't work inside Visual Studio/Rider!!!
+<p align="center" id="description">Clickable UI for C# Console</p>
 
-## Example usage:
+<h2 align="center">⚠️ Warning</h2>
+<p align="center" id="description">Console buttons will only work when launched through the .EXE</p>
 
-```
+<h2 align="center"> 📌<a href="https://www.nuget.org/packages/ConsoleButtons/2.3.0">Package</a></h2>
+<p align="center" id="description">Download the package through nugget or build it yourself!</p>
+
+<h2 align="center">⌨️ Example Usage</h2>
+
+
+```csharp
 static void Main(string[] args)
 {
     ConsoleClick consoleClick = new ConsoleClick();
