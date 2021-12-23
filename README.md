@@ -7,7 +7,7 @@
 
 <h2 align="center">⚠️ Warning</h2>
 <p align="center" id="description">Console buttons will only work when launched through the .EXE</p>
-<p align="center" id="description">Dependencies: <a href="https://www.nuget.org/packages/Colorful.Console/679">Colorful Console</a></p>
+<p align="center" id="description">Dependencies: <a href="https://www.nuget.org/packages/Colorful.Console/679">Colorful Console</a> - Will be removed, you can later then use your own console color package</p>
 
 <h2 align="center"> 📌<a href="https://www.nuget.org/packages/ConsoleButtons/2.3.0">Package</a></h2>
 <p align="center" id="description">Download the package through nugget or build it yourself!</p>
