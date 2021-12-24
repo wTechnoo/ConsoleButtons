@@ -16,7 +16,7 @@
 <h2 align="center">❔ To be worked on</h2>
 <p align="center" id="description">1. Adding a way to the user to use their own/downloaded console packages (such as Colorful.Console or any other color package)</p>
 
-<h2 align="center"> 📌<a href="https://www.nuget.org/packages/ConsoleButtons/2.3.0">Package</a></h2>
+<h2 align="center"> 📌<a href="https://www.nuget.org/packages/ConsoleButtons/2.4.0">Package</a></h2>
 <p align="center" id="description">Download the package through nugget or build it yourself!</p>
 
 <h2 align="center">⌨️ Example Usage</h2>
