@@ -45,13 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Console.cs" />
-    <Compile Include="ConsoleClick.cs" />
-    <Compile Include="ConsoleClick.cs" />
+    <Compile Include="UIManager.cs" />
     <Compile Include="Mouse.cs" />
+    <Compile Include="PInvokes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIComponent.cs" />
-    <Compile Include="Window.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

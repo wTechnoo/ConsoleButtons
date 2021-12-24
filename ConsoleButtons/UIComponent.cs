@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using Console = Colorful.Console;
 
 namespace ConsoleButtons
 {
@@ -32,7 +31,7 @@ namespace ConsoleButtons
         }
     }
 
-    public class AABB
+    public struct AABB
     {
         public int x, y;
         public int width, height;
@@ -55,7 +54,7 @@ namespace ConsoleButtons
             this.text = text;
             AABB = new AABB(x, y, w, h);
             ConsolePosition = new Point(x, y);
-
+            
             if (!initialized)
                 Init();
         }
@@ -76,17 +75,19 @@ namespace ConsoleButtons
 
             WriteWithNoColor();
 
-            (AABB.x, AABB.y) = Window.ConvertConsoleToPx(AABB.x, AABB.y, ConsoleClick.WindowRect);
+            (AABB.x, AABB.y) = Window.ConvertConsoleToPx(AABB.x, AABB.y, UIManager.WindowRect);
 
             initialized = true;
         }
         public void WriteWithNoColor()
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(ConsolePosition.X, ConsolePosition.Y);
-            Console.WriteLine(text, Color.White);
+            Console.WriteLine(text);
         }
-        public void WriteWithColor(Color color)
+        public void WriteWithColor(ConsoleColor color)
         {
+            Console.ForegroundColor = color;
             Console.SetCursorPosition(ConsolePosition.X, ConsolePosition.Y);
             Console.WriteLine(text, color);
         }
@@ -131,7 +132,7 @@ namespace ConsoleButtons
 
             WriteWithNoColor();
 
-            (AABB.x, AABB.y) = Window.ConvertConsoleToPx(AABB.x, AABB.y, ConsoleClick.WindowRect);
+            (AABB.x, AABB.y) = Window.ConvertConsoleToPx(AABB.x, AABB.y, UIManager.WindowRect);
 
             initialized = true;
         }
@@ -144,13 +145,15 @@ namespace ConsoleButtons
 
         public void WriteWithNoColor()
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(ConsolePosition.X, ConsolePosition.Y);
-            Console.WriteLine(IsChecked ? $"[{markChar}] {text}" : $"[ ] {text}", Color.White);
+            Console.WriteLine(IsChecked ? $"[{markChar}] {text}" : $"[ ] {text}");
         }
-        public void WriteWithColor(Color color)
+        public void WriteWithColor(ConsoleColor color)
         {
+            Console.ForegroundColor = color;
             Console.SetCursorPosition(ConsolePosition.X, ConsolePosition.Y);
-            Console.WriteLine(IsChecked ? $"[{markChar}] {text}" : $"[ ] {text}", color);
+            Console.WriteLine(IsChecked ? $"[{markChar}] {text}" : $"[ ] {text}");
         }
     }
     public class Slider : UIComponent
@@ -183,8 +186,8 @@ namespace ConsoleButtons
 
         public override void Hold()
         {
-            (int CX, int CY) = Window.ConvertConsoleToPx(ConsolePosition.X, ConsolePosition.Y, ConsoleClick.WindowRect);
-            (int conSize, _) = Window.ConvertConsoleToPx(size, 0, ConsoleClick.WindowRect);
+            (int CX, int CY) = Window.ConvertConsoleToPx(ConsolePosition.X, ConsolePosition.Y, UIManager.WindowRect);
+            (int conSize, _) = Window.ConvertConsoleToPx(size, 0, UIManager.WindowRect);
 
             float remappedValues = Window.Remap(Mouse.LocalMousePoint.x - CX / 600, CX + 7, CX + conSize, 0, maxValue);
             Value = toInt ? (int)remappedValues : remappedValues;
@@ -199,45 +202,48 @@ namespace ConsoleButtons
 
             WriteWithNoColor();
 
-            (AABB.x, AABB.y) = Window.ConvertConsoleToPx(AABB.x, AABB.y, ConsoleClick.WindowRect);
+            (AABB.x, AABB.y) = Window.ConvertConsoleToPx(AABB.x, AABB.y, UIManager.WindowRect);
 
             initialized = true;
         }
         public void WriteWithNoColor()
         {
+            Console.ForegroundColor = ConsoleColor.White;
+            
             Console.SetCursorPosition(ConsolePosition.X - 1, ConsolePosition.Y);
-            Console.WriteLine('[', Color.White);
+            Console.WriteLine('[');
 
             Console.SetCursorPosition(ConsolePosition.X + size, ConsolePosition.Y);
-            Console.WriteLine(']', Color.White);
+            Console.WriteLine(']');
 
             for (int i = 0; i < size; i++)
             {
                 Console.SetCursorPosition(ConsolePosition.X + i, ConsolePosition.Y);
                 float value = (Value / maxValue) * size;
                 if (i < value)
-                    Console.WriteLine(fillChar, Color.White);
+                    Console.WriteLine(fillChar);
                 else
-                    Console.WriteLine(unfilledChar, Color.White);
+                    Console.WriteLine(unfilledChar);
             }
             
         }
-        public void WriteWithColor(Color color)
+        public void WriteWithColor(ConsoleColor color)
         {
+            Console.ForegroundColor = color;
             Console.SetCursorPosition(ConsolePosition.X - 1, ConsolePosition.Y);
-            Console.WriteLine('[', color);
+            Console.WriteLine('[');
 
             Console.SetCursorPosition(ConsolePosition.X + size, ConsolePosition.Y);
-            Console.WriteLine(']', color);
+            Console.WriteLine(']');
 
             for (int i = 0; i < size; i++)
             {
                 Console.SetCursorPosition(ConsolePosition.X + i, ConsolePosition.Y);
                 float value = (Value / maxValue) * size;
                 if (i < value)
-                    Console.WriteLine(fillChar, color);
+                    Console.WriteLine(fillChar);
                 else
-                    Console.WriteLine(unfilledChar, color);
+                    Console.WriteLine(unfilledChar);
             }
         }
         public override void Update()

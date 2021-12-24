@@ -6,3 +6,11 @@ C:\Users\Technoo\source\repos\ConsoleButtons\obj\Debug\ConsoleButtons.dll
 C:\Users\Technoo\source\repos\ConsoleButtons\obj\Debug\ConsoleButtons.pdb
 C:\Users\Technoo\source\repos\ConsoleButtons\bin\Debug\Colorful.Console.dll
 C:\Users\Technoo\source\repos\ConsoleButtons\obj\Debug\ConsoleButtons.csproj.CopyComplete
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\bin\Debug\ConsoleButtons.dll
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\bin\Debug\ConsoleButtons.pdb
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\bin\Debug\Colorful.Console.dll
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.csprojAssemblyReference.cache
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.csproj.CoreCompileInputs.cache
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.csproj.CopyComplete
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.dll
+C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.pdb
