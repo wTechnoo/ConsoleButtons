@@ -27,27 +27,25 @@ static void Main(string[] args)
 {
     UIManager manager = new UIManager();
     
-    manager.Initialize();
-    
     //Button constructor that auto detects the COLLIDER WIDTH based on how many characters there are on the text.
     Button button = new Button("Sign Up", 0, 0);
-    button.OnHoverOver += () => { button.WriteWithColor(Color.Gray); };
+    button.OnHoverOver += () => { button.WriteWithColor(ConsoleColor.Gray); };
     button.OnHoverStop += () => { button.WriteWithNoColor(); };
-    button.OnClick += () => { button.WriteWithColor(Color.Red); Thread.Sleep(50); };
-    button.OnHold += () => { button.WriteWithColor(Color.Red); };
+    button.OnClick += () => { button.WriteWithColor(ConsoleColor.Red); Thread.Sleep(50); };
+    button.OnHold += () => { button.WriteWithColor(ConsoleColor.Red); };
 
     //Checkbox constructor order (text string, marked checkbox char, is initialized as checked, collide with text, X and Y)
     CheckBox checkBox = new CheckBox("Checkbox", 'X', false, true, 0, 0);
-    checkBox.OnHoverOver += () => { checkBox.WriteWithColor(Color.Gray); };
+    checkBox.OnHoverOver += () => { checkBox.WriteWithColor(ConsoleColor.Gray); };
     checkBox.OnHoverStop += () => { checkBox.WriteWithNoColor(); };
-    checkBox.OnClick += () => { checkBox.WriteWithColor(Color.Cyan); Thread.Sleep(50); };
-    checkBox.OnHold += () => { checkBox.WriteWithColor(Color.Red); };
+    checkBox.OnClick += () => { checkBox.WriteWithColor(ConsoleColor.Cyan); Thread.Sleep(50); };
+    checkBox.OnHold += () => { checkBox.WriteWithColor(ConsoleColor.Red); };
 
     //Slider constructor order (initial value, max value, slider size, convert to int, filled char, unfilled char, X and Y)
     Slider slider = new Slider(0, 10, 10, false, '█', ' ', 5,5);
-    slider.OnHoverOver += () => { slider.WriteWithColor(Color.Gray); };
+    slider.OnHoverOver += () => { slider.WriteWithColor(ConsoleColor.Gray); };
     slider.OnHoverStop += () => { slider.WriteWithNoColor(); };
-    slider.OnHold += () => { slider.WriteWithColor(Color.Red); Console.Write(slider.Value, Color.Aqua); };
+    slider.OnHold += () => { slider.WriteWithColor(ConsoleColor.Red); Console.Write(slider.Value, ConsoleColor.Aqua); };
 
     manager.AddToComponents(button);
     manager.AddToComponents(checkBox);
