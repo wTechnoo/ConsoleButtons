@@ -6,7 +6,7 @@
 <p align="center" id="description">Buttons, checkboxes, sliders and more!</p>
 
 <h2 align="center">⚠️ Warning</h2>
-<p align="center" id="description">Console buttons will only work when launched through the .EXE</p>
+<p align="center" id="description">Console buttons will only work when launched through the built .EXE on RELEASE mode</p>
 
 <h2 align="center">✔️ Changes (24/12/21)</h2>
 <p align="center" id="description">1. Removed Colorful.Console dependency</p>
