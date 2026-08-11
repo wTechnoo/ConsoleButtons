@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AABB.cs" />
+    <Compile Include="Components\Button.cs" />
+    <Compile Include="Components\CheckBox.cs" />
+    <Compile Include="Components\Slider.cs" />
+    <Compile Include="ConsoleMetrics.cs" />
     <Compile Include="UIManager.cs" />
     <Compile Include="Mouse.cs" />
     <Compile Include="PInvokes.cs" />

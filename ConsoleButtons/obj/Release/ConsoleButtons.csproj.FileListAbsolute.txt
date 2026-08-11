@@ -1,0 +1,6 @@
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\ConsoleButtons.dll
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\ConsoleButtons.pdb
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\ConsoleButtons.csproj.AssemblyReference.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\ConsoleButtons.csproj.CoreCompileInputs.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\ConsoleButtons.dll
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\ConsoleButtons.pdb

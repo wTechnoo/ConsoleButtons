@@ -14,3 +14,9 @@ C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\Con
 C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.csproj.CopyComplete
 C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.dll
 C:\Users\Technoo\Documents\GitClones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.pdb
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Debug\ConsoleButtons.dll
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Debug\ConsoleButtons.pdb
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.csproj.AssemblyReference.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.csproj.CoreCompileInputs.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.dll
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Debug\ConsoleButtons.pdb
