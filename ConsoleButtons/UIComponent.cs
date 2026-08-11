@@ -8,8 +8,19 @@ namespace ConsoleButtons
 		/// <summary>Collider, in console character cells. Measured, never hand-tuned.</summary>
 		public AABB AABB;
 
-		public Point ConsolePosition;
+		public Point? ConsolePosition;
 		public bool IsHoveringOver;
+		public bool Initialized { get; private set; }
+
+		public void Inititialize()
+		{
+			if (Initialized)
+				return;
+
+			WriteWithNoColor();
+
+			Initialized = true;
+		}
 
 		public event Action OnClick;
 		public event Action OnHold;
@@ -31,8 +42,11 @@ namespace ConsoleButtons
 		/// <summary>Re-measures the collider from what the component currently paints.</summary>
 		public void Recalculate()
 		{
+			if (!ConsolePosition.HasValue)
+				return;
+
 			var (width, height) = TextMetrics.Measure(HitArea());
-			AABB = new AABB(ConsolePosition.X, ConsolePosition.Y, width, height);
+			AABB = new AABB(ConsolePosition.Value.X, ConsolePosition.Value.Y, width, height);
 		}
 
 		public void WriteWithNoColor()
@@ -42,12 +56,15 @@ namespace ConsoleButtons
 
 		public void WriteWithColor(ConsoleColor color)
 		{
+			if (!ConsolePosition.HasValue)
+				return;
+
 			Console.ForegroundColor = color;
 
 			var lines = Render().Replace("\r\n", "\n").Split('\n');
 
 			for (var i = 0; i < lines.Length; i++)
-				WriteAt(ConsolePosition.X, ConsolePosition.Y + i, lines[i]);
+				WriteAt(ConsolePosition.Value.X, ConsolePosition.Value.Y + i, lines[i]);
 
 			Recalculate();
 		}

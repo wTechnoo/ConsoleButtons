@@ -45,7 +45,7 @@ namespace ConsoleButtons
 		{
 			var (column, _) = ConsoleMetrics.MouseCellPrecise();
 
-			var t = _size <= 0 ? 0f : (column - (ConsolePosition.X + 1)) / _size;
+			var t = _size <= 0 ? 0f : (column - (ConsolePosition.Value.X + 1)) / _size;
 			if (t < 0f) t = 0f;
 			if (t > 1f) t = 1f;
 

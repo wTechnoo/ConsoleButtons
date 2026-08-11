@@ -5,11 +5,11 @@ namespace ConsoleButtons
 {
 	public class Button : UIComponent
 	{
-		string text;
+		string _text;
 
 		public Button(string text, int x, int y)
 		{
-			this.text = text;
+			_text = text;
 			ConsolePosition = new Point(x, y);
 		}
 
@@ -20,17 +20,17 @@ namespace ConsoleButtons
 
 		public string Text
 		{
-			get => text;
+			get => _text;
 			set
 			{
-				text = value;
+				_text = value;
 				Recalculate();
 			}
 		}
 
 		protected override string Render()
 		{
-			return text;
+			return _text;
 		}
 	}
 }

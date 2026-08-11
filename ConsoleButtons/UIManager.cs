@@ -6,11 +6,11 @@ namespace ConsoleButtons
 {
 	public class UIManager
 	{
+		public static Window.Rect WindowRect;
 		readonly List<UIComponent> _components;
 		int _currentTop = 0;
 
 		Mouse _mouse;
-		Window.Rect _windowRect;
 
 		public UIManager()
 		{
@@ -18,7 +18,7 @@ namespace ConsoleButtons
 			Console.CursorVisible = false;
 			DisableConsoleQuickEdit.Go();
 
-			_windowRect = new Window.Rect();
+			WindowRect = new Window.Rect();
 			_mouse = new Mouse();
 			_components = new List<UIComponent>();
 		}
@@ -35,11 +35,14 @@ namespace ConsoleButtons
 
 		public void Update()
 		{
-			Window.GetWindowRect(ConsoleMetrics.Handle, ref _windowRect);
-			_mouse.Update(_windowRect);
+			Window.GetWindowRect(ConsoleMetrics.Handle, ref WindowRect);
+			_mouse.Update(WindowRect);
 
 			for (var i = 0; i < _components.Count; i++)
 			{
+				if (!_components[i].Initialized)
+					_components[i].Inititialize();
+
 				UICollision(_components[i], Mouse.ConsoleMousePoint.X, Mouse.ConsoleMousePoint.Y);
 				_components[i].Update();
 			}
