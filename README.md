@@ -75,18 +75,17 @@ static void Main(string[] args)
 ```csharp
 public class Label : UIComponent
 {
-    private string text;
+    string _text;
 
     public Label(string text, int x, int y)
     {
-        this.text = text;
+        _text = text;
         ConsolePosition = new Point(x, y);
-        Init();
     }
 
-    protected override string Render() => $"< {text} >";
+    protected override string Render() => $"< {_text} >";
 
     //Optional: make only part of the render clickable. Defaults to all of it.
-    //protected override string HitArea() => text;
+    //protected override string HitArea() => _text;
 }
 ```
