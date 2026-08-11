@@ -27,7 +27,7 @@ namespace ConsoleButtons
 			Holding = IsHolding();
 			Clicked = IsPreviousHolding() && !IsHolding();
 
-			(LocalMousePoint.x, LocalMousePoint.y) = ConsoleMetrics.MouseClientPixels();
+			(LocalMousePoint.X, LocalMousePoint.Y) = ConsoleMetrics.MouseClientPixels();
 			(ConsoleMousePoint.X, ConsoleMousePoint.Y) = ConsoleMetrics.MouseCell();
 
 			PreviousClickState = ClickState;

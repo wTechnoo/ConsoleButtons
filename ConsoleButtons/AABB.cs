@@ -2,21 +2,23 @@ namespace ConsoleButtons
 {
 	public struct AABB
 	{
-		public int x, y;
-		public int width, height;
+		public int X;
+		public int Y;
+		public int Width;
+		public int Height;
 
 		public AABB(int x, int y, int w, int h)
 		{
-			this.x = x;
-			this.y = y;
-			width = w;
-			height = h;
+			X = x;
+			Y = y;
+			Width = w;
+			Height = h;
 		}
 
 		public bool Contains(int column, int row)
 		{
-			return column >= x && column < x + width
-			                   && row >= y && row < y + height;
+			return column >= X && column < X + Width
+			                   && row >= Y && row < Y + Height;
 		}
 	}
 }
