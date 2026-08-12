@@ -1,0 +1,12 @@
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\net472\ConsoleButtons.dll
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\net472\ConsoleButtons.pdb
+C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\net472\ConsoleButtons.xml
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.csproj.AssemblyReference.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.AssemblyInfoInputs.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.AssemblyInfo.cs
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.csproj.CoreCompileInputs.cache
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.sourcelink.json
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.dll
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.xml
+C:\Gitclones\ConsoleButtons\ConsoleButtons\obj\Release\net472\ConsoleButtons.pdb

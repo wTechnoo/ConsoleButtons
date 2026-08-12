@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ConsoleButtons</id>
+    <version>3.0.0</version>
+    <title>Console Buttons</title>
+    <authors>Technoo</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/wTechnoo/ConsoleButtons</projectUrl>
+    <description>Clickable UI for C# Console. Buttons, checkboxes, sliders and more!</description>
+    <copyright>Copyright © Technoo 2021</copyright>
+    <tags>console ui buttons checkbox slider mouse cli</tags>
+    <repository type="git" url="https://github.com/wTechnoo/ConsoleButtons" commit="31c60d8bedd8fcf069b9a2e886f64657c88b1176" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework=".NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\net472\ConsoleButtons.dll" target="lib\net472\ConsoleButtons.dll" />
+    <file src="C:\Gitclones\ConsoleButtons\ConsoleButtons\bin\Release\net472\ConsoleButtons.xml" target="lib\net472\ConsoleButtons.xml" />
+    <file src="C:\Gitclones\ConsoleButtons\README.md" target="\README.md" />
+  </files>
+</package>

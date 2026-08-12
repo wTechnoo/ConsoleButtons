@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ConsoleButtons</name>
+    </assembly>
+    <members>
+        <member name="T:ConsoleButtons.ConsoleMetrics">
+            <summary>
+            Translates between screen pixels and console character cells.
+            Nothing here is hardcoded: the cell size is measured from the window itself, so it
+            stays correct across font changes, DPI scaling and window resizes.
+            </summary>
+        </member>
+        <member name="P:ConsoleButtons.ConsoleMetrics.Handle">
+            <summary>
+            Handle of the console window. More reliable than Process.MainWindowHandle, which
+            returns Zero in a few launch scenarios.
+            </summary>
+        </member>
+        <member name="M:ConsoleButtons.ConsoleMetrics.CellSize">
+            <summary>
+            Size of one character cell in screen pixels. Measured by dividing the window's
+            client area (which already excludes the title bar and the borders) by how many
+            cells the console says it is showing.
+            </summary>
+        </member>
+        <member name="M:ConsoleButtons.ConsoleMetrics.MouseClientPixels">
+            <summary>Mouse position in pixels relative to the top-left of the text area.</summary>
+        </member>
+        <member name="M:ConsoleButtons.ConsoleMetrics.MouseCellPrecise">
+            <summary>
+            Mouse position in console cell coordinates, keeping the fraction inside the cell.
+            Useful for smooth dragging.
+            </summary>
+        </member>
+        <member name="M:ConsoleButtons.ConsoleMetrics.MouseCell">
+            <summary>
+            Mouse position snapped to the cell it is over, in the same coordinate space as
+            Console.SetCursorPosition.
+            </summary>
+        </member>
+        <member name="T:ConsoleButtons.TextMetrics">
+            <summary>
+            Measures strings in console cells, so a component's collider can be derived from what
+            it actually paints instead of being tuned by hand.
+            </summary>
+        </member>
+        <member name="M:ConsoleButtons.TextMetrics.Measure(System.String)">
+            <summary>Width of the longest line, and the number of lines.</summary>
+        </member>
+        <member name="M:ConsoleButtons.TextMetrics.DisplayWidth(System.String)">
+            <summary>
+            How many cells the console actually paints for this string. Not the same as
+            string.Length: an emoji is two UTF-16 units but paints two cells, while a CJK
+            glyph is one unit and also paints two.
+            </summary>
+        </member>
+        <member name="F:ConsoleButtons.Mouse.ConsoleMousePoint">
+            <summary>Cursor in console cells — the coordinate space colliders live in.</summary>
+        </member>
+        <member name="F:ConsoleButtons.Mouse.LocalMousePoint">
+            <summary>Cursor in pixels, relative to the top-left of the text area.</summary>
+        </member>
+        <member name="F:ConsoleButtons.Mouse.MousePoint">
+            <summary>Cursor in screen pixels.</summary>
+        </member>
+        <member name="M:ConsoleButtons.MouseExt.GetCursorPositionRaw">
+            <summary>Screen-space cursor position, in the form ScreenToClient expects.</summary>
+        </member>
+        <member name="F:ConsoleButtons.UIComponent.AABB">
+            <summary>Collider, in console character cells. Measured, never hand-tuned.</summary>
+        </member>
+        <member name="M:ConsoleButtons.UIComponent.Render">
+            <summary>
+            Exactly what this component paints. Single source of truth: the collider is
+            measured from this, so the two can never drift apart.
+            </summary>
+        </member>
+        <member name="M:ConsoleButtons.UIComponent.HitArea">
+            <summary>The clickable part of the render. Defaults to all of it.</summary>
+        </member>
+        <member name="M:ConsoleButtons.UIComponent.Recalculate">
+            <summary>Re-measures the collider from what the component currently paints.</summary>
+        </member>
+        <member name="M:ConsoleButtons.UIComponent.WriteAt(System.Int32,System.Int32,System.String)">
+            <summary>
+            Console.Write, never WriteLine: a newline printed on the bottom row scrolls the
+            whole buffer up and leaves every other component one row out of place.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,61 @@
+{
+  "version": 4,
+  "targets": {
+    "net472": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net472": []
+  },
+  "packageFolders": {
+    "C:\\Users\\Technoo\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "3.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Gitclones\\ConsoleButtons\\ConsoleButtons\\ConsoleButtons.csproj",
+      "projectName": "ConsoleButtons",
+      "projectPath": "C:\\Gitclones\\ConsoleButtons\\ConsoleButtons\\ConsoleButtons.csproj",
+      "packagesPath": "C:\\Users\\Technoo\\.nuget\\packages\\",
+      "outputPath": "C:\\Gitclones\\ConsoleButtons\\ConsoleButtons\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Technoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "framework": "net472",
+          "targetAlias": "net472",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.300"
+    },
+    "frameworks": {
+      "net472": {
+        "framework": "net472",
+        "targetAlias": "net472",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
